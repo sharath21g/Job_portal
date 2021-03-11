@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Job portal admin login",
+  "main": "server.js",
+  "scripts": {
+    "debug.javascript.codelens.npmScripts": "never",
+    "start": "nodemon server.js"
+  },
+  "author": "Sharath Gopakumar",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.19",
+    "nodemon": "^2.0.7"
+  }
+}

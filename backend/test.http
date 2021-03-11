@@ -1,0 +1,12 @@
+POST http://localhost:4000/app/educationDetails
+Content-Type: application/json
+
+{
+    "eduType": "ug",
+    "percentageMarks": "100",
+    "courseDuration": "4",
+    "courseStarted": "2005-04",
+    "courseEnded": "2009-04"
+}
+
+
