@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
+const Schema = mongoose.Schema
 
-const experienceSchema = new mongoose.Schema({
+const experienceSchema = new Schema({
     company: {
         type: String,
         required: true
@@ -21,10 +22,11 @@ const experienceSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    date:{
-        type: Date,
-        default: Date.now
+    applId : {
+        type: String,
+        required: true
     }
 })
 
-module.exports = mongoose.model('experience_table',experienceSchema)
+const Experience = mongoose.model('Experience',experienceSchema)
+module.exports = Experience

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
+const Schema = mongoose.Schema
 
-const educationSchema = new mongoose.Schema({
+const educationSchema = new Schema({
     eduType: {
         type: String,
         required: true
@@ -21,10 +22,11 @@ const educationSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    date:{
-        type: Date,
-        default: Date.now
+    applId : {
+        type: String,
+        required: true
     }
 })
 
-module.exports = mongoose.model('education_table',educationSchema)
+const Education = mongoose.model('Education',educationSchema) 
+module.exports = Education

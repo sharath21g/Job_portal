@@ -38,9 +38,6 @@ export default function LandingPage() {
           
           <Button variant="contained" color="default" onClick={() => history.push('/ApplicantDetails')}>Register Here</Button>
         <br />
-        <div class="admin"> 
-            
-        </div>
         </Container>
 
     </div>

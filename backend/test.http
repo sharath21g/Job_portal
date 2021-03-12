@@ -1,12 +1,11 @@
-POST http://localhost:4000/app/educationDetails
+POST http://localhost:4000/app/applicantDetails
 Content-Type: application/json
 
-{
-    "eduType": "ug",
-    "percentageMarks": "100",
-    "courseDuration": "4",
-    "courseStarted": "2005-04",
-    "courseEnded": "2009-04"
+{   
+    "firstName": "g",
+    "lastName": "shar",
+    "mobileNo": "123",
+    "gender": "Male"
 }
 
 

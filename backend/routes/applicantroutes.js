@@ -1,11 +1,11 @@
 const express = require("express")
 const router = express.Router()
-const applicantSchemaCopy = require('../models/ApplicantModels')
-const educationSchemaCopy = require('../models/EducationModels')
-const experienceSchemaCopy = require('../models/ExperienceModels')
+const Applicant  = require('../models/ApplicantModels')
+const Education = require('../models/EducationModels')
+const Experience = require('../models/ExperienceModels')
 
 router.post('/applicantDetails', (req,res) => {
-    const applicantDetails =  new applicantSchemaCopy({
+    const applicantDetails =  new Applicant({
         firstName:  req.body.firstName,
         lastName: req.body.lastName,
         mobileNo: req.body.mobileNo,
@@ -21,12 +21,13 @@ router.post('/applicantDetails', (req,res) => {
 })
 
 router.post('/educationDetails', (req,res) => {
-    const applicantEducation =  new educationSchemaCopy({
-        eduType:  req.body.eduType,
+    const applicantEducation =  new Education({
+        eduType: req.body.eduType,
         percentageMarks: req.body.percentageMarks,
         courseDuration: req.body.courseDuration,
         courseStarted: req.body.courseStarted,
-        courseEnded: req.body.courseEnded
+        courseEnded: req.body.courseEnded,
+        applId: req.body.applId
     })
     applicantEducation.save()
     .then(data => {
@@ -38,12 +39,13 @@ router.post('/educationDetails', (req,res) => {
 })
 
 router.post('/experienceDetails', (req,res) => {
-    const applicantExperience =  new experienceSchemaCopy({
+    const applicantExperience =  new Experience({
         company:  req.body.company,
         jobTitle: req.body.jobTitle,
         yearsOfExp: req.body.yearsOfExp,
         expStarted: req.body.expStarted,
-        expEnded: req.body.expEnded
+        expEnded: req.body.expEnded,
+        applId: req.body.applId
     })
     applicantExperience.save()
     .then(data => {

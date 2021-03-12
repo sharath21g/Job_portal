@@ -24,6 +24,5 @@ const applicantSchema = new Schema({
     }
 })
 
-const Applicant = mongoose.model('Applicant',applicantSchema)
-module.exports = Applicant
-
+const Admin = mongoose.model('Admin',applicantSchema)
+module.exports = Admin

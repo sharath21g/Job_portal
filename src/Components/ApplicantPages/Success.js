@@ -5,7 +5,7 @@ function Success() {
     return (
         <div>
             <h1>Successfully Registered</h1>
-            <button onClick={() => history.push('/')} > Click to return to Job portal home </button>
+            <button onClick={() => history.push('/')} > Click to return to Home page </button>
         </div>
     )
 }
